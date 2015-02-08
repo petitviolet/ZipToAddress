@@ -12,18 +12,6 @@ from zip_address.error_response import ErrorResponse
 
 blueprint = Blueprint(project_name, __name__)
 
-# def use_session(func):
-#     def inner(*args, **kwargs):
-#         with Session() as session:
-#             func(*args, session=session, **kwargs)
-#     return inner
-
-def async(f):
-    def wrapper(*args, **kwargs):
-        thr = Thread(target=f, args=args, kwargs=kwargs)
-        thr.start()
-    return wrapper
-
 @blueprint.route('/', methods=['GET'])
 def index():
     return "test response"
