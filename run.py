@@ -1,4 +1,8 @@
 # -*- encoding:utf-8 -*-
+''' test init app
+`python run.py`
+http://localhost:12345
+'''
 from zip_address import app
 
 if __name__ == "__main__":

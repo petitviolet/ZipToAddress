@@ -1,5 +1,5 @@
 # -*- encoding:utf-8 -*-
-'''
+''' logger configuration
 '''
 import logging
 import logging.config

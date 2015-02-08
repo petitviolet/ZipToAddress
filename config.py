@@ -1,5 +1,5 @@
 # -*- encoding:utf-8 -*-
-'''
+''' configuration file
 '''
 
 from datetime import timedelta
@@ -17,7 +17,6 @@ class Config(object):
     SQLALCHEMY_ECHO = False
 
     CSRF_ENABLED = True
-    # セッションキー的なもの
     SECRET_KEY = os.urandom(24)
     LOGGER_NAME = "%s_log" % project_name
     PERMANENT_SESSION_LIFETIME = timedelta(days=7)

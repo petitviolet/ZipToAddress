@@ -1,6 +1,5 @@
 # -*- encoding:utf-8 -*-
-''' manage.pyで呼ばれるコマンドを定義する
-すでに稼働してるDB使ってるので、Testだけ使えるようにしている
+''' Commands called by manage.py
 '''
 from flask.ext.script import Command
 

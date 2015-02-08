@@ -1,6 +1,6 @@
 # -*- encoding:utf-8 -*-
 '''
-参考
+# Reference
 https://github.com/italomaia/flask-empty/blob/master/examples/blog_example/main.py
 '''
 from flask import Flask
@@ -15,7 +15,7 @@ def config_str_to_obj(cfg):
 
 
 def app_factory(config, app_name, blueprints=None):
-    ''' 設定をまとめて行う
+    ''' app configuration
     '''
     configure_logger()
     app = Flask(app_name)
@@ -29,8 +29,7 @@ def app_factory(config, app_name, blueprints=None):
 
 
 def configure_app(app, config):
-    '''設定ファイルの読み込み
-    config.Configを読む
+    ''' load and apply configuration written in config.py
     '''
     app.config.from_object(config)
     app.config.from_envvar("APP_CONFIG", silent=True)

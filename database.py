@@ -1,5 +1,5 @@
 # -*- encoding:utf-8 -*-
-'''
+''' connection and configure database
 '''
 
 # from flask.ext.sqlalchemy import SQLAlchemy
