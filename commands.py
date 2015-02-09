@@ -37,3 +37,8 @@ class Test(Command):
         print('Complete Test.')
         if result == 0:
             os.system(open_result)
+
+class TestTravis(Command):
+    def run(self):
+        import os
+        os.system('nosetests tests/*.py')
