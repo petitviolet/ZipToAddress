@@ -55,7 +55,7 @@ docs/_build/
 # .python-version
 tags
 .python-version
-config/config_database.yaml
+config/*.yaml
 htmlcov/*
 screenshots
 
