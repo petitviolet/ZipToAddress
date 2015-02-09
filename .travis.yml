@@ -9,6 +9,6 @@ before_script:
   - unzip data/sql_zenkoku.zip -d data
   - mysql zip_address < data/zenkoku.sql
 script:
-  - python manage.py test
+  - python manage.py test_travis
 after_script:
   - rm data/zenkoku.sql
