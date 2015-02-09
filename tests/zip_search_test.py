@@ -1,5 +1,5 @@
 # -*- encoding:utf-8 -*-
-''' tests for /zip_search?zip=[zip code]
+''' tests for /zip/<zip code>
 '''
 import unittest
 from zip_address import app
@@ -9,8 +9,7 @@ import json
 class ZipSearchTest(unittest.TestCase):
     def setUp(self):
         self.app = app.test_client()
-        self.url = '/zip_search'
-        self.query = '?zip={}'
+        self.url = '/zip/{zip}'
         self.valid_zip_single = '001-0000'
         self.valid_zip_multiple = '001-0011'
         self.invalid_zip_not_found = '001-0001'
@@ -22,7 +21,7 @@ class ZipSearchTest(unittest.TestCase):
     def _get_result(self, zip):
         ''' alias to get result
         '''
-        return self.app.get(self.url + self.query.format(zip))
+        return self.app.get(self.url.format(zip=zip))
 
     def test_valid_zip_single(self):
         ''' test valid zip code returns 1 result
