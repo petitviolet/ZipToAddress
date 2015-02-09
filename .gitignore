@@ -53,16 +53,11 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 # .python-version
-
-
 tags
 app/.python-version
 app/config/config_database.yaml
-app/config/config_mail.yaml
-app/config/config_nifty.yaml
 app/log/*
 app/htmlcov/*
 screenshots
-provisioning/ssh_config
 
 .DS_Store
