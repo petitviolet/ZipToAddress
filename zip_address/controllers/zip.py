@@ -17,8 +17,11 @@ class Zip(object):
         if not is_valid:
             return False
         result = AdAddress.query.filter(AdAddress.zip == zip)
-        data = [r.to_dict() for r in result.all()] if result.count() else {}
-        return convert_format(data, False)
+        if result.count():
+            data = [r.to_dict() for r in result.all()]
+            return convert_format(data, False)
+        else:
+            return None
 
     @classmethod
     def validate_zip(cls, zip):
