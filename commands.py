@@ -1,7 +1,8 @@
 # -*- encoding:utf-8 -*-
 ''' Commands called by manage.py
 '''
-from flask.ext.script import Command
+from flask.ext.script import (Command, Option)
+import sys
 
 
 class CreateDB(Command):
@@ -43,3 +44,32 @@ class TestTravis(Command):
         import os
         os.system('nosetests --with-coverage --cover-erase '
                   '--cover-package=zip_address')
+
+class GunicornServer(Command):
+    ''' Run the app within Gunicorn
+    '''
+    def __init__(self, host='127.0.0.1', port=8000, workers=4):
+        self.port = port
+        self.host = host
+        self.workers = workers
+
+    def get_options(self):
+        return [
+            Option('-h', '--host',
+                   dest='host',
+                   default=self.host),
+            Option('-p', '--port',
+                   dest='port',
+                   type=int,
+                   default=self.port),
+            Option('-w', '--workers',
+                   dest='workers',
+                   type=int,
+                   default=self.workers),
+        ]
+
+    # def handle(self, app, host, port, workers):
+    def run(self, host, port, workers):
+        import os
+        os.system('pyenv exec gunicorn zip_address:app -w {w} -b {h}:{p}'\
+                 .format(w=workers, h=host, p=port))
