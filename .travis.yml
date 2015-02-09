@@ -3,7 +3,7 @@ python:
   - "3.4"
 services: mysql
 install:
-  - pip install -r requirements.txt
+  - pip install -r requirements_travis.txt
 before_script:
   - mysql -e 'create database zip_address default charset=utf8;'
   - unzip data/sql_zenkoku.zip -d data
