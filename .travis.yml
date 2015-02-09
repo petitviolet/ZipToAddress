@@ -10,5 +10,7 @@ before_script:
   - mysql zip_address < data/zenkoku.sql
 script:
   - python manage.py test_travis
+after_success:
+  - coveralls
 after_script:
   - rm data/zenkoku.sql
