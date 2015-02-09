@@ -1,0 +1,4 @@
+HOST: "localhost"
+USER: "root"
+PASSWD: ""
+DB: "zip_address"
