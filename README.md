@@ -1,5 +1,7 @@
 # API implemented by Python, Flask
 
+[![Build Status](https://travis-ci.org/petitviolet/ZipToAddress.svg?branch=master)](https://travis-ci.org/petitviolet/ZipToAddress)
+
 - Python(3.4.1)
   - Flask
   - SQLAlchemy
