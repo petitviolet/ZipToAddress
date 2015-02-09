@@ -1,6 +1,8 @@
-# API implemented by Python, Flask
+# Convert Zipcode to Address api
 
 [![Build Status](https://travis-ci.org/petitviolet/ZipToAddress.svg?branch=master)](https://travis-ci.org/petitviolet/ZipToAddress)
+
+## Environment
 
 - Python(3.4.1)
   - Flask
@@ -34,6 +36,9 @@ mysql -u user -p zip_address < zenkoku.sql
 
 ```sh
 python run.py
+# or
+# python manage.py gunicorn -w <worker> -h <host> -p <port>
+python manage.py gunicorn -w 4 -h localhost -p 12345
 ```
 
 [http://localhost:12345/zip/001-0000](http://localhost:12345/zip/001-0000)
