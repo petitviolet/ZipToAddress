@@ -18,12 +18,12 @@ def index():
     response.status_code = 200 if result else 204
     return response
 
-@blueprint.route('/zip_search', methods=['GET'])
-def zip_search():
+@blueprint.route('/zip/<zip>', methods=['GET'])
+def zip_search(zip):
     ''' zip search endpoint
-    /zip_search?zip=123-4567
+    /zip/123-4567
     '''
-    zip = request.args.get('zip', '')
+    # zip = request.args.get('zip', '')
     logger.debug(zip)
     result = Zip.search(zip)
     if result is False:
@@ -33,4 +33,3 @@ def zip_search():
     response = Response(result, mimetype='application/json')
     response.status_code = 200 if result else 204
     return response
-
