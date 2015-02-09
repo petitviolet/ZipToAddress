@@ -41,4 +41,5 @@ class Test(Command):
 class TestTravis(Command):
     def run(self):
         import os
-        os.system('nosetests tests/*.py')
+        os.system('nosetests --with-coverage --cover-erase '
+                  '--cover-package=zip_address')

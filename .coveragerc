@@ -1,0 +1,6 @@
+[run]
+source = zip_address
+[report]
+omit =
+  */python?.?/*
+  */site-packages/*
