@@ -54,10 +54,9 @@ coverage.xml
 docs/_build/
 # .python-version
 tags
-app/.python-version
-app/config/config_database.yaml
-app/log/*
-app/htmlcov/*
+.python-version
+config/config_database.yaml
+htmlcov/*
 screenshots
 
 .DS_Store
