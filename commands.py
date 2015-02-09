@@ -26,7 +26,7 @@ class DropDB(Command):
 class Test(Command):
     def run(self):
         nosetests = ('nosetests tests/*.py --with-xunit --with-coverage '
-                        '--cover-erase --cover-package=app --verbose')
+                        '--cover-erase --cover-package=zip_address --verbose')
         convert_coverage = 'pyenv exec coverage html --include \'app/*\''
         open_result = ('open ./htmlcov/index.html')
         import os
