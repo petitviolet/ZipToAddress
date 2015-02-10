@@ -1,6 +1,7 @@
 # Convert Zipcode to Address api
 
 [![Build Status](https://travis-ci.org/petitviolet/ZipToAddress.svg?branch=master)](https://travis-ci.org/petitviolet/ZipToAddress)
+[![Coverage Status](https://coveralls.io/repos/petitviolet/ZipToAddress/badge.svg?branch=master)](https://coveralls.io/r/petitviolet/ZipToAddress?branch=master)
 
 ![zip_address_demo.gif](https://dl.dropboxusercontent.com/u/26228820/zip_address.gif)
 
